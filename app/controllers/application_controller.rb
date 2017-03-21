@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
   before_filter :protect
 
   def protect
-    allowed_ips = ['193.29.64.0/19']
-
     return if params['controller'] == 'public/schedule'
-    if not allowed_ips.include? request.remote_ip
+    allowedip = IPAddr.new "193.29.64.0/19"
+    userip = IPAddr.new request.remote_ip
+    if not allowedip.include? userip
        # Check for your subnet stuff here, for example
        # if not request.remote_ip.include?('127.0,0')
        render :text => "You are unauthorized"
