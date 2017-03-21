@@ -1,0 +1,17 @@
+%section
+  .page-header
+    %h1= t :edit_conference_rooms
+  = render partial: 'tabs', locals: { active: :rooms }
+
+  - if @conference.rooms.empty?
+    .row
+      .span16
+        .blank-slate
+          %p
+            Here you can create and edit the rooms in which
+            your events take place. Please enter at least one
+            room. This is needed to determine the number of
+            columns in your program schedule.
+  .row
+    .span16
+      = render 'form_rooms'

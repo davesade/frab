@@ -1,0 +1,8 @@
+%section
+  .page-header
+    %h1= t :edit_conference
+  = render partial: 'tabs', locals: { active: :settings }
+
+  .row
+    .span16
+      = render 'form'

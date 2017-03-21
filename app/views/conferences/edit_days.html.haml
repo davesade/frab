@@ -1,0 +1,16 @@
+%section
+  .page-header
+    %h1= t :edit_conference_days
+  = render partial: 'tabs', locals: { active: :days }
+
+  - if @conference.days.empty?
+    .row
+      .span16
+        .blank-slate
+          %p
+            Here you can create and edit the conference days.
+            Your 'days' can start an end anytime, but should not
+            overlap.
+  .row
+    .span16
+      = render 'form_days'

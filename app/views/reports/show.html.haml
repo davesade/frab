@@ -1,0 +1,37 @@
+%section
+  .page-header
+    %h1 Available Reports
+  = render 'report_menu'
+  %h2 Results
+  - if @people or @events
+    = render 'shared/simple_search', path: request.path
+  - unless @search_count.nil?
+    Found
+    = @search_count
+    results.
+  - if not @people.nil? and not @people.empty?
+    .row
+      .span16
+        - if @people.all.empty?
+          %p Sorry, but your search yielded no results.
+        - else
+          = render 'people_table', people: @people
+          = actions_bar do
+            = will_paginate @people
+  - if not @events.nil? and not @events.empty?
+    .row
+      .span16
+        - if @events.all.empty?
+          %p Sorry, but your search yielded no results.
+        - else
+          = render 'events_table', events: @events
+          = actions_bar do
+            = will_paginate @events
+  - if not @data.nil? and not @data.empty?
+    .row
+      .span16
+        = render 'statistics_table', data: @data
+  - if not @transport_needs.nil? and not @transport_needs.empty?
+    .row
+      .span16
+        = render 'transport_needs_table', transport_needs: @transport_needs

@@ -1,0 +1,24 @@
+%section
+  .page-header
+    %h1 Sign in
+  .row
+    .span8
+      = render "shared/flash", flash: flash
+      = simple_form_for @user, url: session_path do |f|
+        %fieldset.inputs
+          = f.input :email
+          = f.input :password
+          = f.input :remember_me, as: :inline_boolean
+        .actions
+          = f.button :button, "Sign in", class: 'primary'
+    - if @conference
+      .span8
+        %h2=t("cfp.forgot_password_headline")
+        %p=t("cfp.forgot_password_description")
+        = action_button "", t("cfp.forgot_password_button"), new_cfp_user_password_path
+  - if @conference
+    .row
+      .span10.offset6
+        %p
+          =t("cfp.looking_for_login_form")
+          =link_to "Call For Participation", new_cfp_session_path
