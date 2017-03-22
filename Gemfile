@@ -57,6 +57,7 @@ gem 'simple_form'
 gem 'sucker_punch'
 gem 'transitions', require: ['transitions', 'active_record/transitions']
 gem 'will_paginate'
+gem 'yaml_db'
 
 group :production do
   gem 'exception_notification'
