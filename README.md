@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # frab - conference management system
 
 frab is a web-based conference planning and management system.
@@ -197,3 +198,7 @@ For updates and discussions around frab, please join our mailinglist
 frab is licensed under an MIT-License. It bundles some
 third-party libraries and assets that might be licensed
 differently. See LICENSE.
+=======
+# frab
+Test of FRAB repository
+>>>>>>> 3859cc5df2b63b243330f2a6c01463869f25fbfc
