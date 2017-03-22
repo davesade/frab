@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'mysql2', group: :mysql
 gem 'pg', group: :postgresql
-gem 'sqlite3', group: :sqlite3
+# gem 'sqlite3', group: :sqlite3
 
 # Use Puma as the app server
 gem 'puma'
