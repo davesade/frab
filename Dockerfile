@@ -2,7 +2,9 @@ FROM ruby:2.3
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - \
+    && apt-get install -y nodejs --assume-yes
 
 WORKDIR /usr/src/app
 COPY Gemfile* ./
