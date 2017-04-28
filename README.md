@@ -1,4 +1,7 @@
-<<<<<<< HEAD
+This is dockerized version of FRAB. Email were disabled, database in production is using MySQL.
+Run it with:  
+``docker run -e RAILS_ENV='production' -e FROM_EMAIL='example@example.org' -p 3000:3000 name_of_your_image``
+
 # frab - conference management system
 
 frab is a web-based conference planning and management system.
