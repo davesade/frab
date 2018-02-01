@@ -11,18 +11,18 @@ GEM
   specs:
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
-      actionview (= 4.2.6)
+      actionview ~> (4.2.7.1)
       activejob (= 4.2.6)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
     actionpack (4.2.6)
-      actionview (= 4.2.6)
+      actionview ~> (4.2.7.1)
       activesupport (= 4.2.6)
       rack (~> 1.6)
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.6)
+    actionview ~> (4.2.7.1)
       activesupport (= 4.2.6)
       builder (~> 3.1)
       erubis (~> 2.7.0)
@@ -131,7 +131,7 @@ GEM
     letter_opener (1.4.1)
       launchy (~> 2.2)
     loofah (2.0.3)
-      nokogiri (>= 1.5.9)
+      nokogiri (~> 1.8.1)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
@@ -144,7 +144,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.2)
-    nokogiri (1.6.7.2)
+    nokogiri (~> 1.8.1)
       mini_portile2 (~> 2.0.0.rc2)
     paper_trail (4.1.0)
       activerecord (>= 3.0, < 6.0)
@@ -182,7 +182,7 @@ GEM
     rails (4.2.6)
       actionmailer (= 4.2.6)
       actionpack (= 4.2.6)
-      actionview (~> 4.2.7.1)
+      actionview ~> (4.2.7.1)
       activejob (= 4.2.6)
       activemodel (= 4.2.6)
       activerecord (= 4.2.6)
@@ -194,7 +194,7 @@ GEM
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
       activesupport (>= 4.2.0.beta, < 5.0)
-      nokogiri (~> 1.6.0)
+      nokogiri (~> 1.8.1)
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
@@ -302,7 +302,7 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma
-  rails (~> 4.2)
+  rails (~> 4.2.7.1)
   ransack
   redcarpet
   ri_cal
