@@ -4,7 +4,7 @@ GIT
   branch: master
   specs:
     localized_language_select (0.3.0)
-      rails (>= 4.1.0)
+      rails (~> 4.2.7.1)
 
 GEM
   remote: https://rubygems.org/
@@ -150,7 +150,7 @@ GEM
       activerecord (>= 3.0, < 6.0)
       activesupport (>= 3.0, < 6.0)
       request_store (~> 1.1)
-    paperclip (4.3.5)
+    paperclip (~> 5.2.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
